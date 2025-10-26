@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Student feedback form</title>
+      
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                display: flex;
+                flex-direction: column; 
+                justify-content: center;
+                align-items: center;
+            }
+            h2 {
+                text-align: center;
+                color: #333;
+
+            }
+            form {
+                width: 89%;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            label {
+                font-weight: bold;
+            }
+            input[type="text"], input[type="email"], select, textarea {
+                width: 90%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            input[type="submit"] {
+                height:50px;
+                width:120px;
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+                border: 2px solid black;
+                outline: none;
+            }
+            .rating{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            </style>
+        <h2>Submit your feedback form</h2>
+        <form action="submit_feedback" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="department">Department:</label><br>
+            <input type="text" id="department" name="department" required><br>
+            <label for="feedback">Feedback:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
+             <select>
+                <option value="Very Satisfied">Very Satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Dissatisfied">Dissatisfied</option>
+                <option value="Very Dissatisfied">Very Dissatisfied</option>
+            </select><br><br>
+            <div class="rating">
+               <input type="submit" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>
